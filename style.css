@@ -25,10 +25,10 @@ a{
     padding-right: 0;
     padding-left: 0;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     border-radius: 25px;
     width: inherit;
-    
 }
 
 .dropDown:hover ul{
@@ -36,12 +36,20 @@ a{
     height: 1em;
 }
 
-.dropDown div{
+div.dropDown {
+    display: none;
     width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 0;
+    border-radius: 25px;
+    width: inherit;
 }
 
 .dropDown:hover div{
     display: flex;
+    flex-direction: column;
 }
 
 .dropDown:hover ul a {
@@ -126,3 +134,8 @@ ul .topBar {
     font-family: franklin Gothic Heavy;
     color: white;
 }
+
+.bottomCorner a{
+    font-family: franklin Gothic Heavy;
+    color: white;
+    }

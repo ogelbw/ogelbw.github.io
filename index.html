@@ -12,22 +12,25 @@
         <ul class="topBar">
             <li><a class="topBar" href="https://github.com/ogelbw">Github</a></li>
             <li class="dropDown"><p>Projects</p>
-                <div style="width: 100%;">
-                    <ul class="darkGreyBorder darkGrey" style="padding-top: 5px; padding-bottom: 5px;">
+                <div style="width: 100%; min-height: 25px;"></div>
+                <div style="width: 100%;" class="dropDown darkGrey darkGreyBorder">
+                    <!-- Projects list goes here -->
+                    <ul style="padding-top: 5px; padding-bottom: 5px;">
                         <a href="https://github.com/ogelbw/Discord-bot-ui">Dicord bot ui</a>  
                     </ul>  
-                </div>
-                <div style="width: 100%;">
-                    <ul class="darkGreyBorder darkGrey" style="padding-top: 5px; padding-bottom: 5px;">
+                    <ul style="padding-top: 5px; padding-bottom: 5px;">
                         <a href="https://crypticc0der.itch.io/nyoomchester">Nyoomchester</a>
                     </ul>  
+
                 </div>
             </li>      
         </ul>
         <ul class="topBar" style="direction: rtl;">
             <li class="dropDown"><p>Funny People</p>
-                <div style="width: 100%;">
-                    <ul class="darkGreyBorder darkGrey" style="padding-top: 5px; padding-bottom: 5px;">
+                <div style="width: 100%; min-height: 25px;"></div>
+                <div style="width: 100%;" class="dropDown darkGrey darkGreyBorder">
+                    <!-- funny people list starts here -->
+                    <ul style="padding-top: 5px; padding-bottom: 5px;">
                         <a href="https://www.crypticcoder.co.uk/">crypticC0der</a>  
                     </ul>  
                 </div>
@@ -39,9 +42,15 @@
 
     <img src="Screenshot_1.png" style="display: block; width: 240px; height: 240px; margin-left: auto; margin-right: auto; ">
 
+    <script>
+        function discordCopy() {
+            navigator.clipboard.writeText("ogelbw#0122")
+            alert("Discord user has been copied to your clipboard")
+        }
+    </script>
     <div class="bottomCorner darkGrey darkGreyBorder" style="border-bottom: 0; border-left: 0; padding-left: 5px; padding-right: 8px;">
-        <p>Email: JedIsaacHodges@gmail.com</p>
-        <p>Discord: ogelbw#0122</p>
+        <a href="mailto:jedisaachodges@gmail.com">Email: JedIsaacHodges@gmail.com</a>
+        <p onclick="discordCopy()">Discord: ogelbw#0122</p>
     </div>
 </body>
 </html>

@@ -1,142 +1,60 @@
-
-.lightGrey{
-    background-color: #383838;
-}
-
-.darkGrey{
-    background-color: #2f3136;
-}
-
-.dropDown div a {
-    display: none;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: franklin gothic heavy;
-    color: white;
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-.dropDown ul{
-    display: none;
-    padding-right: 0;
-    padding-left: 0;
-    text-align: center;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    border-radius: 25px;
-    width: inherit;
-}
-
-.dropDown:hover ul{
-    display: flex;
-    height: 1em;
-}
-
-div.dropDown {
-    display: none;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    text-align: center;
-    margin-top: 0;
-    border-radius: 25px;
-    width: inherit;
-}
-
-.dropDown:hover div{
-    display: flex;
-    flex-direction: column;
-}
-
-.dropDown:hover div a {
+.desktop {
     display: block;
-}
-
-.topBar{
-    height: 1.3cm;
-    padding: 0;
-    width: 100%;
-    display: inline-flex;
-    margin: 0;
-    text-align: center;
-}
-
-.topBar p{
-    font-family: franklin Gothic Heavy;
-    color: white;
-    padding: 0;
-    margin: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 25px;
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-
-a.topBar{
-    font-family: franklin Gothic Heavy;
-    color: white;
-    padding: 0;
-    margin: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 25px;
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-
-.topBar ul li{
-    margin-top: 8px;
-    list-style-type: none;
-}
-
-ul .topBar {
-    padding: 0;
-    width: 100%;
-    display: inline-flex;
-    overflow-y: visible;
-}
-
-.topBar p:hover{
-    cursor: pointer;
-}
-
-.darkGreyBorder{
-    border-width: 3px;
-    border-color: #1f1f1f;
-    border-style: solid;
-}
-
-.bottomCorner{
-    position: fixed;
+    position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
-    align-items: center;
-    flex-direction: column-reverse;
-    flex-grow: 1;
-
-    border-top-right-radius: 25px;
+    width: 100%;
+    height: calc(100% - 40px);
+    background-color: blueviolet;
+    grid-template-columns: repeat(18, 1fr);
+    overflow: hidden;
 }
 
-.bottomCorner p:hover{
-    cursor: pointer;
+.desktopRow {
+    display: flex;
+    justify-content: baseline;
+    overflow: hidden;
 }
 
-.bottomCorner p{
-    font-family: franklin Gothic Heavy;
-    color: white;
+.desktopTile {
+    position: relative;
+    min-width: 100px;
+    height: 110px;
+    width: 100px;
+    background-color: yellow;
+    margin: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-.bottomCorner a{
-    font-family: franklin Gothic Heavy;
-    color: white;
-    }
+.taskbar {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: brown;
+    left: 0;
+    justify-content: space-between;
+}
+
+.startbtn {
+    width: 75px;
+    height: calc(100% - 6px);
+    margin: 3px;
+    background-color: yellow;
+}
+
+.clock {
+    width: 150px;
+    height: calc(100% - 6px);
+    margin: 3px;
+    background-color: yellow;
+}
+
+.appTray {
+    width: 100%;
+    height: calc(100% - 6px);
+    margin: 3px;
+    background-color: yellow;
+}

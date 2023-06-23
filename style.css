@@ -1,3 +1,8 @@
+/* @font-face {
+    font-family: 'customFont';
+    src: url('asset/font/WimCrouwel68Regular-d9vPE.ttf') format('truetype');
+} */
+
 .desktop {
     display: block;
     position: absolute;
@@ -5,7 +10,7 @@
     left: 0;
     width: 100%;
     height: calc(100% - 40px);
-    background-color: blueviolet;
+    background-color: #008080;
     grid-template-columns: repeat(18, 1fr);
     overflow: hidden;
 }
@@ -33,23 +38,82 @@
     bottom: 0px;
     height: 40px;
     width: 100%;
-    background-color: brown;
+    background-color: #C0C0C0;
     left: 0;
     justify-content: space-between;
+    border-top: 2px solid #EEEEEE;
 }
 
 .startbtn {
-    width: 75px;
+    display: flex;
+    width: fit-content;
+    min-width: 90px;
     height: calc(100% - 6px);
     margin: 3px;
     background-color: yellow;
+    background-color: #C0C0C0;
+    align-items: center;
+    justify-content: end;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.startbtn:hover{
+    cursor:pointer;
+}
+
+.startbtn:active{
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.startbtn>div>p {
+    margin-right: 5px;
+    color: black;
+    font-size: 1.2em;
+    font-family: 'customFont';
+    letter-spacing: 1px;
+}
+
+.startbtn>div>img{
+    max-height: 80%;
+    margin-right: 5px;
+}
+
+.startbtn:active>div{
+    top: 1.5px;
+    left: 1.5px;
+}
+
+.taskbar>.seperator {
+    width: 0px;
+    height: calc(100% - 6px);
+    margin-top: 3px;
+    border-left: 1px solid rgb(73, 73, 73);
+    border-right: 1px solid rgb(255, 255, 255);
 }
 
 .clock {
-    width: 150px;
-    height: calc(100% - 6px);
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+    height: calc(100% - 10px);
     margin: 3px;
-    background-color: yellow;
+    border-top: 2px solid #979797;
+    border-left: 2px solid #979797;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    align-items: center;
+}
+
+.clock>p{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 1.2em;
 }
 
 .appTray {

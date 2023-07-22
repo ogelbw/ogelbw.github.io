@@ -26,10 +26,25 @@
     min-width: 100px;
     height: 110px;
     width: 100px;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin: 5px;
     overflow-y: hidden;
     overflow-x: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+.desktopTileTaken {
+    position: relative;
+    min-width: 100px;
+    height: 110px;
+    width: 100px;
+    /* background-color: yellow; */
+    margin: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    pointer-events: none;
+    user-select: none;
 }
 
 .taskbar {
@@ -60,11 +75,18 @@
     border-right: 2px solid black;
 }
 
-.startbtn:hover{
-    cursor:pointer;
+.startbtnToggled {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
 }
 
-.startbtn:active{
+.startbtn:hover {
+    cursor: pointer;
+}
+
+.startbtn:active {
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-bottom: 2px solid white;
@@ -79,12 +101,17 @@
     letter-spacing: 1px;
 }
 
-.startbtn>div>img{
+.startbtn>div>img {
     max-height: 80%;
     margin-right: 5px;
 }
 
-.startbtn:active>div{
+.startbtn:active>div {
+    top: 1.5px;
+    left: 1.5px;
+}
+
+.startbtnToggled>div {
     top: 1.5px;
     left: 1.5px;
 }
@@ -110,7 +137,7 @@
     align-items: center;
 }
 
-.clock>p{
+.clock>p {
     margin-right: 10px;
     margin-left: 10px;
     font-size: 1.2em;
@@ -121,4 +148,75 @@
     height: calc(100% - 6px);
     margin: 3px;
     background-color: yellow;
+}
+
+.startMenu {
+    position: absolute;
+    display: inline-block;
+    bottom: 40px;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #C0C0C0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.startStrip {
+    float: left;
+    direction: rtl;
+    justify-content: end;
+    background-color: blue;
+    background-image: linear-gradient(to bottom, blue, blue, rgb(0, 0, 114));
+    left: 1px;
+    height: 100%;
+    width: 40px;
+    color: white;
+    top: -16px;
+}
+
+.startStrip>p {
+    overflow: visible;
+    position: relative;
+    transform: rotate(270deg);
+    scale: 1.5;
+    bottom: calc(-100% + 150px);
+    white-space: nowrap;
+}
+
+.startMenu>.entry {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+
+.startMenu>div>.entry:hover {
+    background-color: blue;
+    color: white;
+}
+
+.startMenu>.seperator {
+    width: 100%;
+    border-top: 1px solid rgb(73, 73, 73);
+    border-bottom: 1px solid white;
+}
+
+.hidden {
+    display: none;
+}
+
+.desktopIcon{
+    position: absolute;
+    height: 110px;
+    width: 100px;
+    cursor: grab;
+    background-color: red;
+}
+
+.desktopIcon:active{
+    cursor: grabbing;
+    user-select: none;
 }
